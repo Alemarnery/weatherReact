@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import Clima from "./Components/Clima";
 import Error from "./Components/Error";
 import Formulario from "./Components/Formulario";
+import PropTypes from "prop-types";
 
 function App() {
   const [busqueda, guardarBusqueda] = useState({
@@ -36,7 +37,7 @@ function App() {
     if (consultar) {
       consultarApi();
     }
-  }, [ciudad, pais, consultar]);
+  }, [consultar]);
 
   let componente;
   if (error) {
